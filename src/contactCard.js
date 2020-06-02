@@ -1,17 +1,25 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./bootstrap.min.css";
 
 class ContactCard extends Component {
   render() {
     return (
-      <div>
-        <h1>{this.props.name}</h1>
-        <ul>
-          <div>Mobile: {this.props.mobile}</div>
-          <div>Work: {this.props.work}</div>
-          <div>Email: {this.props.email}</div>
-        </ul>
+      <div className="row">
+      <div className="col-sm-6">
+        <div className="card">
+          <div className="card-body">
+            <h1 className="card-title">{this.props.name}</h1>
+            <ul>
+              <li>Mobile: {this.props.mobile}</li>
+              <li>Work: {this.props.work}</li>
+              <li>Email: {this.props.email}</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </div>
+
     );
   }
 }
